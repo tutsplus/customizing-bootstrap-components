@@ -1,0 +1,9 @@
+body { padding: 20px; }
+
+.modal-backdrop {
+    background-color: #005;
+}
+
+.modal-backdrop.in {
+    opacity: .8;
+}

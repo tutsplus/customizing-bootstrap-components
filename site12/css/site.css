@@ -1,0 +1,8 @@
+body { padding: 20px; }
+
+#myModal .modal-dialog {
+    width: 40%;
+    left: 10px;
+    top: 10px;
+    margin: 0 0;
+}

@@ -1,0 +1,5 @@
+body { padding-top: 80px; }
+
+.card, .card-img-top {
+    border-radius: 0;
+}

@@ -1,0 +1,26 @@
+body { padding: 20px; }
+
+.modal-backdrop.in {
+    opacity: .8;
+}
+
+.modal-header, .modal-footer {
+    background-color: crimson;
+    color: white;
+}
+
+.modal-header {
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+}
+
+.modal-footer {
+    border-bottom-left-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+}
+
+.modal-content {
+    background-color: transparent;
+}
+
+.modal-body { background-color: white; }

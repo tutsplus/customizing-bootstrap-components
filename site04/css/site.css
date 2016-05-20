@@ -1,0 +1,9 @@
+body { padding-top: 80px; }
+
+.card, .card-img-top {
+    border-radius: 0;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: red;
+}

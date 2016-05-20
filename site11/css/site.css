@@ -1,0 +1,23 @@
+body { padding-top: 10px; }
+
+.dropdown-menu {
+    background-color: #56abf5;
+    margin-top: 0;
+    max-height: 300px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #fff;
+    font-size: .9rem;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: inherit;
+    color: #0275d8;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}

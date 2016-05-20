@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Modals</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/site.css" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+    <body>
+       <h1>Bootstrap Modals</h1>
+        <!-- Button trigger modal -->
+        <button id="btnProduct" type="button" class="btn btn-primary btn-lg" data-target="#myModal">
+          Buy now!
+        </button>
+        
+        <button id="btnError" type="button" class="btn btn-primary btn-lg" data-target="#myModal">
+          Don't click this button!
+        </button>
+        
+        <button id="btnTerms" type="button" class="btn btn-primary btn-lg" data-target="#myModal">
+          Agree to My Terms
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+              </div>
+              <div class="modal-body">
+                <h3>Modal Body</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Eveniet consequuntur distinctio facere ratione deserunt,
+                perferendis laboriosam cupiditate similique. Assumenda quos
+                sequi laboriosam. Officiis, placeat, maiores. Fuga facere
+                magnam voluptas nostrum.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="infoProduct" class="invisible">
+            <div class="modalHeader">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">On Sale Now!</h4>
+            </div>
+            <div class="modalBody">
+                <h4>50% OFF!!</h4>
+                <p>De cillum cernantur do do malis proident. Quid e te aute eiusmod ea lorem et 
+                    quibusdam e anim. Quo noster noster velit litteris id ab irure eiusmod 
+                    cohaerescant ad sed veniam ex illum si proident nisi noster iis sunt est 
+                    consequat legam labore ad quid.</p>
+            </div>
+            <div class="modalFooter">
+                <a href="#" class="btn btn-primary pull-left">Buy Now!</a>
+                <button type="button" class="btn btn-secondary pull-right" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        
+        <div id="infoError" class="invisible">
+            <div class="modalHeader">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Oops!</h4>
+            </div>
+            <div class="modalBody">
+                <p>I don't think you meant to do that!!</p>
+            </div>
+            <div class="modalFooter">
+                <button type="button" class="btn btn-secondary pull-right" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        
+        <div id="infoTerms" class="invisible">
+            <div class="modalHeader">
+                <h4 class="modal-title" id="myModalLabel">Accept My Terms!</h4>
+            </div>
+            <div class="modalBody">
+                <p>Escape doesn't work. Clicking on the background doesn't work. You have to click "Agree" to continue!</p>
+            </div>
+            <div class="modalFooter">
+                <button type="button" class="btn btn-secondary pull-right" data-dismiss="modal">Agree</button>
+            </div>
+        </div>
+        <script>
+            $(function(){
+                var $header = $("#myModal .modal-header"),
+                    $body = $("#myModal .modal-body"),
+                    $footer = $("#myModal .modal-footer"),
+                    $modal = $("#myModal");
+                
+                $("#btnProduct").click(function() {
+                    var headerContent = $("#infoProduct .modalHeader").html();
+                    $header.html(headerContent);
+                    var bodyContent = $("#infoProduct .modalBody").html();
+                    $body.html(bodyContent);
+                    var footerContent = $("#infoProduct .modalFooter").html();
+                    $footer.html(footerContent);
+                    
+                    $modal.removeData("bs.modal").modal();
+                });
+                
+                $("#btnError").click(function() {
+                    var headerContent = $("#infoError .modalHeader").html();
+                    $header.html(headerContent);
+                    var bodyContent = $("#infoError .modalBody").html();
+                    $body.html(bodyContent);
+                    var footerContent = $("#infoError .modalFooter").html();
+                    $footer.html(footerContent);
+                    
+                    $modal.removeData("bs.modal").modal();
+                });
+                
+                $("#btnTerms").click(function() {
+                    var headerContent = $("#infoTerms .modalHeader").html();
+                    $header.html(headerContent);
+                    var bodyContent = $("#infoTerms .modalBody").html();
+                    $body.html(bodyContent);
+                    var footerContent = $("#infoTerms .modalFooter").html();
+                    $footer.html(footerContent);
+                    
+                    $modal.removeData("bs.modal").modal({
+                        backdrop: "static",
+                        keyboard: false
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

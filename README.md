@@ -7,4 +7,4 @@ Not all Bootstrap websites have to look and behave like Bootstrap websites. In t
 
 These files are the project files for the tutsplus.com video training course, “Customizing Bootstrap Components.” Each folder matches a lesson of the course.
 
-**Available on Envato Tuts+ Mat 2016**
+**Available on Envato Tuts+ May 2016**
